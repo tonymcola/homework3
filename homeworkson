@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int decimalNum ;
+    int start = 1;
+    int binaryNum[] = new int[100];
+    Scanner scan = new Scanner(System.in);
+
+    System.out.println("Please enter a decimal number! ");
+    decimalNum = scan.nextInt();
+
+    while(decimalNum != 0)
+    {
+      binaryNum[start++] = decimalNum % 2;
+      decimalNum = decimalNum/2;
+    }
+
+    System.out.println("The Binary number is: ");
+
+    for(int i = start-1; i > 0; i --)
+    {
+      System.out.print(binaryNum[i]);
+    }
+
+    System.out.print("\n");
+  }
+}
